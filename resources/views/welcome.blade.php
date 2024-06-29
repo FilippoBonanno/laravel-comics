@@ -9,5 +9,9 @@
 </head>
 <body>
     <h1>Laravel Comics</h1>
+    <p> {{ $name }}</p>
+    <p> {{ $surname }}</p>
+    <p> {{ $age }}</p>
+    
 </body>
 </html>
