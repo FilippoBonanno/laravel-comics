@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    color: white;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: rgb(13, 73, 255);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #444;
+    padding: 1rem;
+}
+
+header #logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+header nav > a {
+    margin: 0 0.3rem;
+}
+
+.wrapper {
+    padding: 1rem;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card {
+    /*
+    il gap è di 1rem
+    ci sono 4 cards, quindi 3 spazi nel mezzo
+    3 spazi x 1rem = 3rem totali
+    ad ogni card (delle 4) tolgo 1/4 dello spazio totale
+    quindi 3rem totali / 4
+     */
+    width: calc(25% - 3rem / 4);
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        aspect-ratio: 9/16;
+        object-fit: cover;
+        display: block;
+        transition: all 250ms;
+    }
+
+    img:hover {
+        transform: scale(1.2);
+    }
+}
+
+.dettaglio-fumetto {
+    display: flex;
+
+    .preview {
+        width: 30%;
+    }
+
+    .details {
+        width: 70%;
+        padding: 1rem;
+    }
+}
+
+footer {
+    background-color: #444;
+    padding: 1rem;
+}

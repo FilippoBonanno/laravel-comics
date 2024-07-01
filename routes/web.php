@@ -14,18 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = [
-       "name" => "Simon",
-       "surname" => "Misericordia",
-       "age" => 28
-       
-    ];
+
+    $data = config("data.comics");
+
+    return view('home', $data);
+
+})->name("home");
 
 
-    return view('welcome', $data );
-});
 
-
-Route::get('/home', function () {
-    return view('welcome');
-});
